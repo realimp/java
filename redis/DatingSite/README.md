@@ -1,23 +1,36 @@
-У вас есть сайт знакомств, на котором уже зарегистрировалось 20 пользователей. Показывайте их всех по очереди на главной странице сайта: изначально все пользователи упорядочены в порядке регистрации. После каждого показа пользователь отправляется в конец очереди. Иногда пользователи оплачивают специальную услугу, которая перемещает их в начало очереди. 
+## Background
+We'll be using Redis to emulate rotating banner on the front page of a dating website. Let's assume that we have a Dating Site with 20 registered users. Every user is displayed on front page one by one ordered by their registration date. After each user is displayed it goes to the end of queue. Any user can order a payed display which puts him next in queue.
 
-Напишите программу, которая будет эмулировать работу такого сайта, хранить очередь в Redis, и выводить лог операций в консоль.
+## The task
+Our program should store users queue in Redis and:
+1. start endless cycle logging to console info about which user is shown on front page.
+2. on every 10th iteration of a cycle random user pays for a privileged display and his id is logged to console
+3. wait for a second after each cycle iteration
 
-Программа должна запускать бесконечный цикл, в котором:
+Sample output:
 
-1. Выводится в консоль номер пользователя, которого нужно сейчас отобразить на главной странице. 
++ Showing user 1
++ Showing user 2
++ Showing user 3
++ User 8 payed for privileged display
++ Showing user 8
++ Showing user 4
++ Showing user 5
++ ...
++ Showing user 1
++ ...
 
-2. В одном из 10 случаев, случайный пользователь оплачивает платную услугу, в консоль выводится его номер.
+I'll be using docker to test the program
+#### Install Docker for Windows
+https://docs.docker.com/docker-for-windows/install/
+#### Install Docker for Mac
+https://docs.docker.com/docker-for-mac/install/
 
-3. Программа ждет 1 секунду, и цикл начинается заново.
-
-Пример вывода:
-
-— На главной странице показываем пользователя 1
-— На главной странице показываем пользователя 2
-— На главной странице показываем пользователя 3
-> Пользователь 8 оплатил платную услугу
-— На главной странице показываем пользователя 8
-— На главной странице показываем пользователя 4
-… [пропущено] Показываем 5,6,7,9,10,11,12,13,14,15,16,17,18,19…
-— На главной странице показываем пользователя 1 [снова]
-И т.д.
+#### Install Redis
+```
+docker pull redis
+```
+#### Start docker container
+```
+docker run --rm --name some-redis -p 127.0.0.1:6379:6379/tcp -d redis
+```

@@ -1,0 +1,29 @@
+.item {
+    width: 300px;
+    border-bottom: 1px solid grey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+    background: transparent;
+    border: 0px;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-edit {
+    color: gray;
+}
+
+h2 {
+    margin: 0px;
+}
+p {
+    margin: 0px;
+}
+
+.add-item-field {
+    margin: 12px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+
+<body>
+<h1>To Do List</h1>
+<div class="add-item-field">
+    <form action="#"  id="add-task">
+        <input name="name" id="name" type="text" placeholder=" + To Do">
+        <br>
+        <input name="details" id="details" type="text" placeholder="Details here">
+        <input id="submit-task" class="add" type="submit" value="add">
+    </form>
+</div>
+<div id="items-list">
+    <div th:each="item : ${items}">
+        <table class="item" th:attr="data-val=${item.id}">
+            <col width="276">
+            <col width="24">
+            <tr>
+                <td>
+                    <h2 th:text="${item.name}"></h2>
+                </td>
+                <td>
+                    <button class="btn delete-item" th:attr="data-val=${item.id}">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br>
+<h3>Item Details:</h3>
+<div id="item-details"></div>
+</body>
+
+</html>

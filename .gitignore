@@ -36,3 +36,7 @@ hs_err_pid*
 .settings/
 .classpath
 .project
+
+# projects folders
+mysql/JDBC_Exp/target/
+springBoot/ToDo_List/target/

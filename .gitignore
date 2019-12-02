@@ -39,5 +39,5 @@ hs_err_pid*
 
 # projects folders
 mysql/JDBC_Exp/target/
-mysql/JDBC_Exp/test/
+mysql/JDBC_Exp/src/test/
 springBoot/ToDo_List/target/

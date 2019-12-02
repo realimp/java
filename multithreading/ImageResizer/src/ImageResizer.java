@@ -46,9 +46,7 @@ public class ImageResizer implements Runnable {
                     }
                 }
 
-                BufferedImage newImage = new BufferedImage(
-                        newWidth, newHeight, BufferedImage.TYPE_INT_RGB
-                );
+                BufferedImage newImage = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_RGB);
                 Graphics2D graphics2D = newImage.createGraphics();
                 graphics2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
                 graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -63,6 +61,5 @@ public class ImageResizer implements Runnable {
         } catch (Exception ex){
             ex.printStackTrace();
         }
-
     }
 }

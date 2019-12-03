@@ -1,5 +1,5 @@
 ## The Task
-The task is to create a simple image resizing app that will demonstrate how multithreading.
+The task is to create a simple image resizing app that will demonstrate how multithreading works.
 
 #### Side note
 The goal of this exercise is to understand how to use multithreading in processor intensive task. So lets assume that we only need to downscale images and that the final image has at least 3 times smaller width than original.

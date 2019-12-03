@@ -68,7 +68,7 @@ ImageIO.write(newImage, "jpg", newFile);
 ```
 
 
-After everything is set all that's left is to start resizing images using multiple threads available. So I'm getting number of processor threads available and divide files in the source folder between them and create a queue of images to be resized for each one. And then just start resizing of every image using *Thread().start()* method.
+After everything is set all that's left is to start resizing images using multiple threads available. So I'm getting number of processor threads available and divide files in the source folder between them. Create a queue of images to be resized for each one. And then just start resizing of every image using *Thread().start()* method.
 ```java
 int processorThreadsAvailable = Runtime.getRuntime().availableProcessors();
 int imagesPerThreadCount = files.length / processorThreadsAvailable;

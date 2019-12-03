@@ -83,4 +83,4 @@ ImageResizer lastThreadResizer = new ImageResizer(imagesForLastThread, newWidth,
 new Thread(lastThreadResizer).start();
 ```
 
-In the output you'll notice that the resizing starts simultaneously for the same number of images as your CPU threads count.
+In the output you'll notice that the resizing starts simultaneously for the same number of images as number of CPU threads available for JVM instance.

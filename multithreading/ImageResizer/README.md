@@ -16,7 +16,7 @@ String dstFolder = "D:/dst";    // path to destination folder
 Next it's time to create ImageResizer class that will handle the downscaling. It must implement *Runnable* interface so it can be used for multithreading and will have three fields.
 
 ```java
-private File[] files;       // this will hold files in our source folder
+private File[] files;       // this will hold files to be resized by the thread
 private int newWidth;       // this will hold a new width for resized files
 private String dstFolder;   // this will hold path for destination folder
 ```

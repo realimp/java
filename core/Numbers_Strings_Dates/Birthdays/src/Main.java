@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         SimpleDateFormat dateFormat = new SimpleDateFormat(" - dd.MM.yyyy - EEEE", Locale.forLanguageTag("ru"));
 
-        Calendar calendar = new GregorianCalendar(1988, Calendar.JULY, 21);
+        Calendar calendar = new GregorianCalendar(1989, Calendar.FEBRUARY, 13);
 
         int i=0;
 

@@ -43,3 +43,6 @@ mysql/JDBC_Exp/src/test/
 springBoot/ToDo_List/target/
 springBoot/ToDo_List/src/test/
 springBoot/todolist.sql
+
+# include project libs
+!multithreading/SiteMapGenerator/lib/jsoup-1.12.1.jar

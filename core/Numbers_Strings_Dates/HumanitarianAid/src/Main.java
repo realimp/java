@@ -11,7 +11,7 @@ public class Main
     private static int cratesLoaded;
 
     public static void main(String[] args) {
-        System.out.println("Введите число ящиков: ");
+        System.out.println("Number of crates to load: ");
 
         Scanner scanner = new Scanner(System.in);
         int cratesCount = scanner.nextInt();
@@ -22,14 +22,14 @@ public class Main
 
             if (truckNumber == containersLoaded / truckCapacity)
             {
-                System.out.println("Грузовик " + ++truckNumber + ":");
+                System.out.println("Truck " + ++truckNumber + ":");
             }
             if (containerNumber == cratesLoaded / containerCapacity)
             {
-                System.out.println("\tКонтейнер " + ++containerNumber + ":");
+                System.out.println("\tContainer " + ++containerNumber + ":");
             }
 
-            System.out.println("\t\tЯщик " + (i+1));
+            System.out.println("\t\tCrate " + (i+1));
             cratesLoaded++;
         }
     }

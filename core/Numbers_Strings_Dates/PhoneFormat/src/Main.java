@@ -2,13 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите номер телефона в любом формате:");
+        System.out.println("Write you phone number:");
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
         String clearedString = userInput.replaceAll("[^0-9]", "");
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("+7 ");
-        if(clearedString.charAt(0) == '7' || clearedString.charAt(0) == '8'){
+
+        if (clearedString.charAt(0) == '7' || clearedString.charAt(0) == '8') {
             clearedString = clearedString.substring(1);
         }
 

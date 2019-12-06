@@ -23,7 +23,7 @@ public class Main {
 
         double averageTemp = ((double)Math.round((totalTemp/patientsTemps.length) * 10)) / 10;
 
-        System.out.println("\nСредняя температура по больнице - " + averageTemp);
-        System.out.println("Число здоровых пациентов - " + healthyPatientsCount);
+        System.out.println("\nAverage temperature - " + averageTemp);
+        System.out.println("Number of healthy patients - " + healthyPatientsCount);
     }
 }

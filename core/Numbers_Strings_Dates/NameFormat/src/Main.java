@@ -20,12 +20,11 @@ public class Main {
     }
 
     private static boolean checkWordsCount(String testString){
-        if (!testString.contains(" ") || testString.length() - testString.replace(" ", "").length() != 2){
+        if (!testString.contains(" ") || testString.length() - testString.replace(" ", "").length() != 2) {
             return true;
         }
-        else {
-            return false;
-        }
+
+        return false;
     }
 
     private static boolean containsInvalidChar(String testString){
